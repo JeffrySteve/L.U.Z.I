@@ -7,6 +7,7 @@ import time
 import wikipedia
 import webbrowser
 import cv2
+import pywhatkit as kit
 from requests import get
 from engine.features import *
 
@@ -90,9 +91,9 @@ def TakeCommand():
             search = TakeCommand().lower()
             webbrowser.open(f"{search}")    
         
-         
-         
-         
+        elif "send message" in query.lower():
+            kit.sendwhatmsg("+447587772953", "Testing Luzi msg Protocol",16,57)
+          
                
         else:
             pass
